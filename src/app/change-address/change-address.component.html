@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row" (click)="removeaddressList()">
+        <div class="col-md-6 offset-md-3" *ngFor="let data of customer">
+            <!-- <h2 class="text-center"></h2> -->
+            <form (ngSubmit)="onSubmit(data)">
+                <!-- <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="custname" required [(ngModel)]="custmr.custname" name="custname">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" required [(ngModel)]="custmr.email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" required [(ngModel)]="custmr.phone" name="phone">
+                </div> -->
+                <div class="form-floating md-3">
+                    <input type="text" class="form-control" id="address" required [(ngModel)]="custmr.address" name="address" (keyup)="addressSearch($event)" [value]="data.address" placeholder="Enter your address" autocomplete="off">
+                    <label for="address">Address</label>
+                </div>
+                <div class="list-group">
+                    <a *ngFor="let address of addresses" (click)="onSelectAddress(address)" class="list-group-item list-group-item-acction">{{address.formattedAddress}}</a>
+                </div>
+                <div style="text-align: center !important; margin-top: 2rem; position: relative;">
+                <button class="btn btn-primary">Update</button>
+                </div>
+                <!-- <input type="text" value="nithin"> -->
+                <!-- <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" class="form-control" id="password" required [(ngModel)]="custmr.password" name="password">
+                </div> -->
+            </form>
+        </div>
+    </div>
+</div>
+ 

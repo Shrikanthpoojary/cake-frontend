@@ -1,0 +1,18 @@
+<h1>Special Occasions</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <ng-container *ngFor="let data of cakeType | async">
+    <div class="card">
+        <a routerLink="/displayCake/{{data.typeid}}">
+            <img src="{{data.imgUrl}}" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title" style="font-weight: bold;">{{data.typename}}</h5>
+        </div>
+    </div>
+</ng-container>
+</div> 
+
+
+
+
+

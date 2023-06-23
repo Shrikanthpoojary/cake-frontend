@@ -1,0 +1,47 @@
+<div class="body">
+
+<div class="container">
+    <div class="row" (click)="removeaddressList()">
+        <div class="col-md-6 offset-md-3">
+            <form (ngSubmit)="onSubmit()">
+                <h2 class="text-center" style="font-weight: bold; font-size: 2.1em;">Sign Up</h2>
+                <div class="form-floating md-3">
+                    <input type="text" class="form-control" id="custname" [(ngModel)]="customer.custname" name="custname" placeholder="enter your name"  required autocomplete="off">
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-floating md-3">
+                    <input type="email" class="form-control" id="email" required [(ngModel)]="customer.email" name="email" placeholder="enter your email" autocomplete="off">
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-floating md-3">
+                    <input type="text" class="form-control" id="phone" required [(ngModel)]="customer.phone" name="phone" placeholder="enter your phone number" pattern="[6-9]{1}[0-9]{9}" title="Please enter valid phone number" autocomplete="off">
+                    <label for="phone">Phone</label>
+                </div>
+                <div class="form-floating md-3">
+                    <input type="text" class="form-control" id="address" required [(ngModel)]="customer.address" name="address" (keyup)="addressSearch($event)" [value]="customer.address" placeholder="enter your address">
+                    <label for="address" autocomplete="nope">Address</label>
+                </div>
+                <div class="list-group">
+                    <a *ngFor="let address of addresses" (click)="onSelectAddress(address)" class="list-group-item list-group-item-acction">{{address.formattedAddress}}</a>
+                </div>
+                <!-- <div id="myMap"class="form-group">
+                    
+                </div>
+                <input type="text" id="address"  style="width:600px" [value]="addrs"><br>
+                    <input type="text" id="latitude">
+                    <input type="text" id="longitude"> -->
+                <div class="form-floating md-3">
+                    <input type="password" class="form-control" id="password" required [(ngModel)]="customer.password" name="password" placeholder="enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" autocomplete="off">
+                    <label for="password">Password</label>
+                </div>
+                <div  style="text-align: center !important; margin-top: 2rem;">
+                    <button class="btn btn-primary" style="width: 100%; background-color: #af1313; border: none; padding: 0.7rem 0;">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="img"></div>
+</div>
+ 

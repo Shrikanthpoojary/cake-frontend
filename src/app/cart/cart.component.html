@@ -1,0 +1,67 @@
+<app-header></app-header>
+<!-- <ng-container  *ngIf="cartitem.length != 0"> -->
+<ng-container *ngIf="grandTotal != 0">
+ <div class="container">
+    <div class="card-table">
+        <div class="card-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <!-- <th>Sr.No</th> -->
+                        <th>Cake Name</th>
+                        <th>Cake image</th>
+                        <th>Weight</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cartitem" >
+                        <!-- <td>{{i+1}}</td> -->
+                        <td><strong>{{item.cakename}}</strong></td>
+                        <td ><img style="width: 120px;" src="{{item.imgeUrl}}" alt=""></td>
+                        <td style="padding: 30px 30px;">{{item.weight}}</td>
+                        <td> <div class="btn-qntity"><button (click)="dereaseQuantity(item)" class="btn btn-danger" style="margin: 0.2rem 10px; padding: 0.1rem 0.35rem;">-</button> {{item.quantity}}<button (click)="increaseQuantity(item)" class="btn btn-danger" style="margin: 0.2rem 10px; padding: 0.1rem 0.35rem;">+</button></div></td>
+                        <!-- <td><button (click)="increaseQuantity(item)" class="btn">+</button></td> -->
+                        <td style="padding: 30px 10px;"><strong>{{item.weight/0.5*(item.amount*item.quantity) | currency:"&#8377;"}}</strong></td>
+                        <td style="padding: 25px 15px;"><button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
+                    </tr><br>
+                    <tr *ngFor="let data of customer" >
+                        <td style="width: 400px;"><span *ngIf="!address"> <strong>Address: </strong>{{data.address}}</span> <span *ngIf="address"><app-change-address></app-change-address></span><button (click)="changeaddress()" class="btn btn-info btn-address" *ngIf="!address">Change</button></td>
+                        <td></td>
+                        <td> <button (click)="emptyCart()" class="btn btn-danger">Empty Cart</button></td>
+                        <td><button routerLink="/" class="btn btn-primary">Shop More</button> </td>
+                        <td><strong>Grand Total:</strong> <br><strong class="grand-total">{{grandTotal|currency:"&#8377;"}}</strong></td>
+                        <td><button style="color:
+                        white;" class="btn bg-success">Place Order</button></td>
+                    </tr>
+                </tbody><br>
+            </table>
+        </div>
+    </div>
+   </div> 
+</ng-container>
+
+
+
+
+
+
+
+<!-- <p>Cart works</p> -->
+
+<!-- <ng-container  *ngIf="cartitem.length == 0"> -->
+<ng-container  *ngIf="grandTotal == 0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="../../assets/emptyCart.png" alt="">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button routerLink="/" class="btn btn-danger">Shop Now</button>
+        </div>
+    </div>
+</ng-container>

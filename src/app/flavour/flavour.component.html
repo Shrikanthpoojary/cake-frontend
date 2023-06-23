@@ -1,0 +1,13 @@
+<h1>Flavours</h1>
+<div class="row row-cols-3 row-cols-md-3 g-4">
+    <div class="card" *ngFor="let data of flavour | async">
+        <a routerLink="/cake/{{data.flavourid}}">
+            <img src="{{data.imageUrl}}" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title" style="font-weight: bold;">{{data.flavourname}}</h5>
+        </div>
+    </div>
+</div> 
+<hr class="my-5">
+

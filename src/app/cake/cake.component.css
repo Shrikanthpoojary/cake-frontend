@@ -1,0 +1,11 @@
+div.row{
+    margin-top: 0.5rem;
+    justify-content: space-evenly;
+}
+
+div.card{
+    width: 25rem;
+    height: 100%; 
+    margin: 0.5rem;
+    padding: 12px 12px;
+}

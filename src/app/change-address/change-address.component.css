@@ -1,0 +1,40 @@
+.container{
+    width: 100%;
+    /* display: grid; */
+    width: 100%;
+}
+
+form{
+    margin-left: -6rem;
+    width: calc(100% + 20rem);
+}
+
+form input{
+    box-shadow: none;
+    border-width: 0 0 1px 0;
+}
+
+form input:focus{
+    border-width: 0 0 3px 0;
+    border-color: black;
+}
+
+.list-group{
+    position: absolute;
+    max-height: 13rem;
+    max-width: 28.5%;
+    overflow: auto;
+    z-index: 1;
+    /* transform: translateY(-0.1rem); */
+}
+
+.btn{
+    position: absolute;
+    width: 18%; 
+    top: -1.7rem;
+    left: 40%;
+    background-color: #0d9729; 
+    border: none; 
+    /* margin-bottom: 2rem; */
+    padding:0.2rem  0.1rem;
+}

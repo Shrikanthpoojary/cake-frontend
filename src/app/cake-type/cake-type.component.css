@@ -1,0 +1,40 @@
+div.row{
+    margin-top: 0.5rem;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 20rem;
+    height: 20rem;
+    text-align: center;
+    /* margin: 25px; */
+}
+div.card-body {
+    padding: 0;
+}
+div.card-title {
+    font-weight: bold;
+}
+ a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+ }
+
+ a img {
+    width: 18rem;
+    height: 18rem;
+    padding: 1rem 0;
+ }
+
+ .img-fluid {
+    width: 600px;
+    height: 400px;
+ }
+ 
+ h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 800;
+ }

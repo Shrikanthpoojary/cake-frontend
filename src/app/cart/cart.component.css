@@ -1,0 +1,52 @@
+.card {
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center img{
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 110px;
+    width: 250px;
+    margin: 20px 0px;
+}
+
+.btn-address{
+    display: flex;
+    /* width:50px; */
+    padding: 5px 10px;
+    font-size: 50%;
+    background-color: rgb(243, 66, 66);
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+}
+
+.grand-total{
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: center; */
+    padding-left: 1rem;
+    color: rgb(206, 37, 37);
+}
+
+.btn-qntity{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* flex-direction: row; */
+    align-items: center;
+    width: 10%;
+    padding: 1rem 0;
+    /* margin: 1rem auto; */
+}

@@ -1,0 +1,39 @@
+<div class="body">
+<div class="img"></div>
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <!-- <div class="card"> -->
+          <!-- <div class="card-body"> -->
+            <form>
+              <h4 class="text-center" style="font-weight: bold; font-size: 2.1em;">Login</h4>
+              <div class="form-floating md-3">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="model.email" required>
+                <label for="email">Email address</label>
+                <!-- <div class="alert alert-danger">
+                  <div>
+                    Email is required.
+                  </div>
+                </div> -->
+              </div>
+              <div class="form-floating md-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password" [(ngModel)]="model.password" required>
+                <label for="password">Password</label>
+                <!-- <div class="alert alert-danger">
+                  <div>
+                    Password is required.
+                  </div>
+                </div> -->
+              </div>
+              <div style="justify-content:space-between;" class="d-flex">
+              <button (click)="getCustid()" type="submit" class="btn btn-primary" style="width: 100%; background-color: #af1313; border: none; padding: 0.7rem 0;">Submit</button>
+
+              <a routerLink="/customer" style="width: 100%; border: none; padding: 0.7rem 0; text-align: end; color: rgb(199, 29, 29);">Sign Up</a>
+            </div>
+            </form>
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</div>

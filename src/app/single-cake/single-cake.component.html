@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div class="card mb-3" style="max-width: 1200px;">
+    <ng-container *ngFor="let data of cakeList | async">
+        <div class="row g-0" >
+            <div class="col-md-6">
+                <img src="{{data.imgeUrl}}" class="img-fluid rounded-start " alt="...">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h1 class="card-title">{{data.cakename}}</h1>
+                    <h2 class="card-text">{{data.amount*cart.weight/0.5 | currency : "&#8377;"}}</h2>
+                    <label for="" style="margin-left: 1rem; font-size: 500;">Weight</label><br>
+                    <div>
+                        
+                        <input type="radio" class="btn-check" name="weight" id="one" [(ngModel)] ="cart.weight" value="0.5"><label class="btn btn-outline-danger" for="one">0.5Kg</label>
+                        
+                        <input type="radio" class="btn-check" name="weight" id="two" [(ngModel)] ="cart.weight" value="1"><label class="btn btn-outline-danger" for="two">1Kg</label>
+                        
+                        <input type="radio" class="btn-check" name="weight" id="three" [(ngModel)] ="cart.weight" value="2"><label class="btn btn-outline-danger" for="three">2Kg</label>
+                        
+                        <input type="radio" class="btn-check" name="weight" id="four" [(ngModel)] ="cart.weight" value="4"><label class="btn btn-outline-danger"  for="four">4kg</label>
+
+                       
+                        <!-- <input type="radio" class="" name="weight" id="a" value="weight" [(ngModel)]="cart.weight">
+                        <label class="btn btn-outline-danger" for="a">0.5</label> -->
+                    
+                        <!-- <input type="radio" class="" name="weight" id="b" value="weight" [(ngModel)] ="cart.weight">
+                        <label class="btn btn-outline-danger" for="b" >1</label> -->
+
+                        <!-- <input type="radio" class="" name="weight" id="danger-outlined" value="weight" [(ngModel)] ="cart.weight">
+                        <label class="btn btn-outline-danger" for="danger-outlined">2</label> -->
+
+                        <!-- <input type="radio" class="" name="weight" id="x" value="weight" [(ngModel)] ="cart.weight">
+                        <label class="btn btn-outline-danger" for="x">4</label> -->
+
+
+
+                        <!-- <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+
+<input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+
+<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+
+<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+<label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label> -->
+
+
+
+                    </div><br>
+                    <!-- <p>weight:{{data.weight}}</p> -->
+                    <p class="card-text">{{data.desc}}</p><br>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    <button class="btn btn-danger" (click)="addToCart(data)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+  <!-- <app-header></app-header>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="card" *ngFor="let data of cake | async">
+        <a >
+            <img src="{{data.imgeUrl}}" class="card-img-top" alt="cake image">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title" style="font-weight: bold;">{{data.cakename}}</h5>
+            <h4 class="card-text">{{data.amount |currency:"&#8377;"}}</h4>
+        </div>
+    </div>
+</div> -->
+ 
+

@@ -1,0 +1,66 @@
+.container {
+    margin-top: 50px;
+    max-width: 600px;
+}
+
+/* #myMap{
+    height: 350px;
+    width: 680px;
+} */
+
+.body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.img{
+    background: url('../../assets/logincake.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h2{
+    margin-bottom: 2rem;
+}
+
+.container{
+    /* height: 100vh; */
+    display: grid;
+    align-items: center;
+    /* width: calc(100% + 10rem); */
+    /* margin-left: -5rem; */
+    /* border: 5px solid red; */
+}
+
+form{
+    /* border: 1px solid; */
+    /* border-radius: 15px; */
+    /* padding: 1rem 2rem 2rem 2rem; */
+    transform: translateY(-5rem);
+    margin-left: -4rem;
+    width: calc(100% + 5rem);
+}
+
+form input{
+    box-shadow: none;
+    border-width: 0 0 1px 0;
+}
+
+form input:focus{
+    border-width: 0 0 3px 0;
+    border-color: black;
+}
+
+.list-group{
+    position: absolute;
+    max-height: 13rem;
+    max-width: 28.5%;
+    overflow: auto;
+    z-index: 1;
+}
+
+form div{
+    margin: 1.5rem 0;
+}

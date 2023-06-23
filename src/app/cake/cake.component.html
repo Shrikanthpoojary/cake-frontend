@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+<ng-container *ngFor="let data of cakeFlavour | async">
+    <div class="card" >
+        <a routerLink="/singleCake/{{data.cakeid}}">
+            <img src="{{data.imgeUrl}}" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title" style="font-weight: bold; color: #d02d2d;">{{data.cakename}}</h5>
+            <h4 class="card-text">{{data.amount |currency:"&#8377;"}}</h4>
+        </div>
+    </div>
+</ng-container>
+</div>

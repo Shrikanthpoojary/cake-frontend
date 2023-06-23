@@ -1,0 +1,16 @@
+div.card {
+    margin: auto;
+}
+
+.btn-danger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 2.3rem;
+    width: 18rem;
+}
+
+.btn-outline-danger {
+    margin: 0 1rem;
+}
